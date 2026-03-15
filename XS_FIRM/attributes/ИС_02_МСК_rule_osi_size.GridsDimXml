@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rule name="ИС_02_МСК_rule_osi_size" xsi:noNamespaceSchemaLocation="DimRule.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <selection type="DistanceToGrid"></selection>
+  <position>
+    <selectionArea>Whole</selectionArea>
+    <placing>Right</placing>
+    <placing>Below</placing>
+    <edgeShapeVisbleFaceType>All</edgeShapeVisbleFaceType>
+    <linkingTopLeft>false</linkingTopLeft>
+    <linkingTopRight>false</linkingTopRight>
+    <linkingBottomLeft>false</linkingBottomLeft>
+    <linkingBottomRight>false</linkingBottomRight>
+    <orientation>Global</orientation>
+  </position>
+  <settings>
+    <startPointHorizontal>Left</startPointHorizontal>
+    <startPointVertical>Bottom</startPointVertical>
+    <verticalEqualsHorizontal>true</verticalEqualsHorizontal>
+    <closeLinesHorizontal>false</closeLinesHorizontal>
+    <dimensionToHorizontal>Middle</dimensionToHorizontal>
+    <sameDimensionOnAllSides>true</sameDimensionOnAllSides>
+    <dimPropertiesHorizontal>ИС_02_МСК_SIZE</dimPropertiesHorizontal>
+    <dimPropertiesBottom>standard</dimPropertiesBottom>
+    <dimPropertiesLeft>standard</dimPropertiesLeft>
+    <dimPropertiesRight>standard</dimPropertiesRight>
+    <dimPropertiesTop>standard</dimPropertiesTop>
+    <dimensionType>Straight</dimensionType>
+    <measureFrom>CastUnitAssembly</measureFrom>
+    <dimensionAlsoFromGrid>false</dimensionAlsoFromGrid>
+    <castUnitAssemblyOption>OnlyConcreteSteelParts</castUnitAssemblyOption>
+    <measureObject>0</measureObject>
+    <combine>ObjectsAll</combine>
+    <minDistanceToCreate>0.00</minDistanceToCreate>
+  </settings>
+</rule>

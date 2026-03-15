@@ -1,0 +1,83 @@
+// This is sample configuration file for rebar markings
+//
+// Following values are used when multiple marks are merged into one mark
+MergeOneFormat="1 pcs"
+MergeTwoOrMoreFormat="%d x"  
+MergeAndFormat=" & "
+LeaderLinetype=1
+//
+//Separators in rebar mark (in use only for dim style marks)
+DimensionMarkSpacingSeparator="/"
+ExactDimensionMarkSpacingSeparator=" + "
+ExactDimensionMarkPcsSeparator="*"
+
+// Mark templates for bar group (in use only for dim style marks)
+GroupBarMark="%NUMBER% %SHAPE%%POS% Ø %SIZE% c/c %CC%"
+//Available elements in GroupBarMark:
+//%NAME%
+//%GRADE%	material grade of the rebar or mesh
+//%CLASS%	class designation of the rebar or mesh
+//%LENGTH%	total length of the rebar
+//%NUMBER%	quantity of rebars
+//%CC%		center-to-center spacing 
+//%CC_MIN%	smallest spacing value of the rebar group
+//%CC_MAX%	largest spacing value of the rebar group
+//%CC_EXACT%	all spacing values of the rebar group
+//%SHAPE%	shape of the rebar based on environment/rebar catalog
+//%POS%	rebar position number
+
+MarkingDimAttributes="rebar_mark"
+//
+// Available FIN, SWE, UK, US
+ScheduleCountry="FIN"
+//
+// Unit is millimetre        
+ScheduleDimensionRoundingAccuracy=1.0
+//
+// UP or DOWN or NEAREST
+ScheduleDimensionRoundingDirection="DOWN"
+//
+// Unit is millimetre
+ScheduleTotalLengthRoundingAccuracy=10.0
+//
+// UP or DOWN or NEAREST
+ScheduleTotalLengthRoundingDirection="DOWN"
+//
+// Symbol file for reinforcement mesh symbols in drawings
+MeshSymbolFile="mesh.sym"
+//
+// Symbol file for prestressed strand symbols in drawings
+StrandSymbolFile="strand.sym"
+//
+// Symbol file for unbonded prestressed strand symbols in drawings
+UnbondingSymbolFile="unbonding.sym"
+//
+// Symbol file for reinforcement bent symbols in drawings
+BentSymbolFile="bent.sym"
+//
+// Template for rebar mesh size
+RebarMeshSize="%CC_DIAMETER_LONG%/%CC_DIAMETER_CROSS%-%CC_PITCHING_LONG%/%CC_PITCHING_CROSS%-%LENGTH%/%WIDTH%""
+//
+// Settings for pull-out picture in marks & templates:
+PullOutDimensionFormat=1
+PullOutDimensionPrecision=1
+PullOutDimensionUnits=1
+PullOutColor=1
+//PullOutColor options: 0 = black, 1 = white, 2 = red, 3 = green, 4 = blue, 5 = cyan, 6 = yellow, 7 = magenta
+PullOutVisibleLineType=1
+//PullOutVisibleLineTypes: 1 = continuous, 2 = dashed, 3 = dashed 2, 4 = dash dot, 5 = dot, 6 = dash dot dot, 7 = dash dot 2
+PullOutRepresentation=1
+//PullOutRepresentation options: 0 = single line, 1 = double lines, 2 = filled line, 3 = stick
+PullOutAngleColor=1
+//PullOutAngleColors: 0 = black, 1 = white, 2 = red, 3 = green, 4 = blue, 5 = cyan, 6 = yellow, 7 = magenta
+PullOutAngleLineType=1
+//PullOutAngleLineType options: 1 = continuous, 2 = dashed, 3 = dashed 2, 4 = dash dot, 5 = dot, 6 = dash dot dot, 7 = dash dot 2
+//PullOutShowDuplicateDims=0
+//0 = never show duplicate dimensions (default)
+//1 = show equal & parallel dimensions but not similar hook dimensions
+//2 = do not show equal & parallel dimensions but show both hook dimensions (even if they are equal)
+//3 = show all dimensions
+//4 = do not show any hook dimensions
+//5 = do not show any hook dimensions nor equal & parallel dimensions
+PullOutLeaderLineMinLength=2000
+PullOutBendingRadiusAsMultiplier=0

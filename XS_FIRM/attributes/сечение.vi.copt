@@ -1,0 +1,17 @@
+TITLE_CLASSIFIER 
+{
+    Version= 1.00 
+    Count= 2 
+    SECTION_CLASSIFIER_GROUP 
+    {
+        albl_Part 
+        791_Информационные_элементы 
+        501_Не_отображать_деталь 
+        }
+    SECTION_CLASSIFIER_GROUP 
+    {
+        albl_Part_mark 
+        791_Информационные_элементы 
+        501_Не_отбражать_метку 
+        }
+    }
