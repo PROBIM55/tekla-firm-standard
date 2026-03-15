@@ -1,0 +1,2 @@
+Get-ChildItem -Path "\\srv01inm\12_Departments\Бригада Нацвина\00_МОДЕЛИ\TeklaModels\XS_FIRM\" -Recurse | Unblock-File
+Get-ChildItem -Path "Q:\Бригада Нацвина\00_МОДЕЛИ\TeklaModels\XS_FIRM\" -Recurse | Unblock-File
