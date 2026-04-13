@@ -1,0 +1,653 @@
+// ---------------------------------------------------------------------------------------
+// Template Editor 3.80 (2019) - User defined attributes (=UDA)
+// =====================================================
+// 
+// This file contains attributes which are defined in the 'objects.inp'.
+// 
+// Notes:
+// - Please use the predefined folder 'USERDEFINED' for the each attributes in this file.
+// - Installation of Tekla Structures overwrites always this file.
+//
+// ---------------------------------------------------------------------------------------
+// This file contains the defined attributes and their default values for a value field.
+// 
+// The structure of 'contentattributes_USERDEFINED.lst' is the following. The file is divided
+// into two sections, which are sperated with the line [BINDINGS]. The first section defines
+// all attributes and the default settings for those attributes. The 2nd section assigns
+// the attributes to contenttypes. Attributes are presented to the user in the order they
+// appear in the definition list for contenttypes.
+//
+// A special case of a component type is ALL, which defines that the attributes defined in 
+// the following lines are available to all types of components. Other special types are
+// HEADER, PAGEHEADER, PAGEFOOTER and FOOTER.
+// 
+// You can use a virtual node to group certain attributes under a common subnode. A virtual
+// node is defined inside []. This doesn't affect the name of the actual attribute - text
+// between [] is removed when the attribute name is inserted into a template definition.
+//
+// You can add comment text for the user attributes by defining it between "-characters after
+// the attribute name.
+// 
+// The attribute definition line is divided into nine different columns. The star character
+// '*' means that the default value should be used or that this property doesn't apply to
+// this type of valuefield.
+// 
+// The attribute dividing to the different versions can be done by using extension #1...N
+// in attribute name.
+//
+// The columns are
+// 
+// 1. Attribute name (maximum of 63 characters. Use only letters, numbers, dots and underlines)
+// 2. Data type (FLOAT, CHARACTER, INTEGER)
+// 3. Value field justification (LEFT, CENTER, RIGHT)
+// 4. Is the field cacheable (TRUE or FALSE, TRUE is default)
+// 5. Value field length (characters)
+// 6. The number of decimals (present only if data type is FLOAT, and no precision defined)
+// 7. The unit type
+// 8. The unit
+// 9. The precision
+// 										
+// Name				Datatype	Justify Cacheable	Length	Decimals 	Unit type 	Unit 		Precision
+// XXXX				CHARACTER	RIGHT	TRUE		8		2 			Length		ft-frac		1/8
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// TAB_ISSO
+KM_Thick             FLOAT     RIGHT   TRUE  10    2    Length   mm   0.1
+KM_Area              FLOAT     RIGHT   TRUE  15    2    Area     mm2  1
+KM_Volume            FLOAT     RIGHT   TRUE  15    2    Volume   mm3  1
+KM_Weight            FLOAT     RIGHT   TRUE  10    2    Weight   kg   0.01
+KM_Color             CHARACTER LEFT    TRUE  20
+KM_Sun               CHARACTER LEFT    TRUE  10
+KM_Aggr              CHARACTER LEFT    TRUE  10
+KM_Area_Color_nS_nA  FLOAT     RIGHT   TRUE  15    2    Area     mm2  1
+KM_Area_Color_nS_yA  FLOAT     RIGHT   TRUE  15    2    Area     mm2  1
+KM_Area_Color_yS_nA  FLOAT     RIGHT   TRUE  15    2    Area     mm2  1
+KM_Area_Color_yS_yA  FLOAT     RIGHT   TRUE  15    2    Area     mm2  1
+
+
+
+// end of custom properties
+
+// ------------------------------------------------------------------------------------------------
+// Binding of attributes according to the object types.
+// (available object types for Row component have saved in the contenttypes.lst)
+// ------------------------------------------------------------------------------------------------
+
+// ANALYSIS_RIGID_LINK		=
+// ANTIMATERIAL				=
+// ASSEMBLY					=
+// BOLT						=
+// CAST_UNIT				=
+// CHAMFER					=
+// COMMENT					=
+// CONNECTION				=
+// DRAWING					=
+// HIERARCHIC_CAST_UNIT		=
+// HIERARCHIC_OBJECT		=
+// HISTORY					=
+// HOLE						=
+// LOAD						=
+// LOADGROUP				=
+// MESH						=
+// NUT						=
+// PART						=
+// POUR_BREAK				=
+// POUR_OBJECT				=
+// POUR_UNIT				=
+// REBAR					=
+// REFERENCE_MODEL			=
+// REFERENCE_OBJECT			=
+// REFERENCE_ASSEMBLY		=
+// REVISION					=
+// SIMILAR_ASSEMBLY			=
+// SIMILAR_CAST_UNIT		=
+// SIMILAR_PART				=
+// SINGLE_REBAR				=
+// SINGLE_STRAND			=
+// STRAND					=
+// STUD						=
+// SURFACE					=
+// SURFACING				=
+// TASK						=
+// WASHER					=
+// WELD						=
+
+
+[BINDINGS] // Do NOT remove this line
+
+// ==================================
+//   Construction management
+//   ------------------
+//   tab_page("ИССО")
+// ==================================
+
+// ---------------------------------------------------------------------------
+// KM_Thick - Толщина листа, мм
+// ---------------------------------------------------------------------------
+HEADER                 =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+PAGEHEADER             =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+PAGEFOOTER             =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+FOOTER                 =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+ANALYSIS_RIGID_LINK    =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+ANTIMATERIAL           =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+ASSEMBLY               =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+BOLT                   =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+CAST_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+CHAMFER                =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+COMMENT                =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+CONNECTION             =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+DRAWING                =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+HIERARCHIC_CAST_UNIT   =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+HIERARCHIC_OBJECT      =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+HISTORY                =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+HOLE                   =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+LOAD                   =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+LOADGROUP              =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+MESH                   =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+NUT                    =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+PART                   =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+POUR_BREAK             =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+POUR_OBJECT            =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+POUR_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+REBAR                  =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+REBAR_ASSEMBLY         =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+REFERENCE_MODEL        =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+REFERENCE_OBJECT       =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+REFERENCE_ASSEMBLY     =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+REVISION               =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+SIMILAR_ASSEMBLY       =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+SIMILAR_CAST_UNIT      =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+SIMILAR_PART           =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+SINGLE_REBAR           =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+SINGLE_STRAND          =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+STRAND                 =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+STUD                   =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+SUMMARY                =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+SURFACE                =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+SURFACING              =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+TASK                   =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+WASHER                 =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+WELD                   =USERDEFINED.[КМ Атрибуты].KM_Thick "Толщина листа, мм"
+
+// ---------------------------------------------------------------------------
+// KM_Area - Площадь листа брутто, мм2
+// ---------------------------------------------------------------------------
+HEADER                 =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+PAGEHEADER             =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+PAGEFOOTER             =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+FOOTER                 =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+ANALYSIS_RIGID_LINK    =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+ANTIMATERIAL           =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+ASSEMBLY               =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+BOLT                   =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+CAST_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+CHAMFER                =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+COMMENT                =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+CONNECTION             =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+DRAWING                =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+HIERARCHIC_CAST_UNIT   =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+HIERARCHIC_OBJECT      =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+HISTORY                =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+HOLE                   =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+LOAD                   =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+LOADGROUP              =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+MESH                   =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+NUT                    =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+PART                   =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+POUR_BREAK             =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+POUR_OBJECT            =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+POUR_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+REBAR                  =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+REBAR_ASSEMBLY         =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+REFERENCE_MODEL        =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+REFERENCE_OBJECT       =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+REFERENCE_ASSEMBLY     =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+REVISION               =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+SIMILAR_ASSEMBLY       =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+SIMILAR_CAST_UNIT      =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+SIMILAR_PART           =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+SINGLE_REBAR           =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+SINGLE_STRAND          =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+STRAND                 =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+STUD                   =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+SUMMARY                =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+SURFACE                =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+SURFACING              =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+TASK                   =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+WASHER                 =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+WELD                   =USERDEFINED.[КМ Атрибуты].KM_Area "Площадь листа брутто, мм2"
+
+// ---------------------------------------------------------------------------
+// KM_Volume - Объем листа брутто, мм3
+// ---------------------------------------------------------------------------
+HEADER                 =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+PAGEHEADER             =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+PAGEFOOTER             =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+FOOTER                 =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+ANALYSIS_RIGID_LINK    =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+ANTIMATERIAL           =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+ASSEMBLY               =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+BOLT                   =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+CAST_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+CHAMFER                =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+COMMENT                =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+CONNECTION             =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+DRAWING                =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+HIERARCHIC_CAST_UNIT   =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+HIERARCHIC_OBJECT      =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+HISTORY                =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+HOLE                   =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+LOAD                   =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+LOADGROUP              =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+MESH                   =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+NUT                    =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+PART                   =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+POUR_BREAK             =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+POUR_OBJECT            =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+POUR_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+REBAR                  =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+REBAR_ASSEMBLY         =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+REFERENCE_MODEL        =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+REFERENCE_OBJECT       =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+REFERENCE_ASSEMBLY     =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+REVISION               =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+SIMILAR_ASSEMBLY       =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+SIMILAR_CAST_UNIT      =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+SIMILAR_PART           =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+SINGLE_REBAR           =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+SINGLE_STRAND          =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+STRAND                 =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+STUD                   =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+SUMMARY                =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+SURFACE                =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+SURFACING              =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+TASK                   =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+WASHER                 =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+WELD                   =USERDEFINED.[КМ Атрибуты].KM_Volume "Объем листа брутто, мм3"
+
+// ---------------------------------------------------------------------------
+// KM_Weight - Масса листа брутто, кг
+// ---------------------------------------------------------------------------
+HEADER                 =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+PAGEHEADER             =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+PAGEFOOTER             =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+FOOTER                 =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+ANALYSIS_RIGID_LINK    =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+ANTIMATERIAL           =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+ASSEMBLY               =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+BOLT                   =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+CAST_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+CHAMFER                =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+COMMENT                =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+CONNECTION             =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+DRAWING                =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+HIERARCHIC_CAST_UNIT   =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+HIERARCHIC_OBJECT      =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+HISTORY                =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+HOLE                   =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+LOAD                   =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+LOADGROUP              =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+MESH                   =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+NUT                    =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+PART                   =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+POUR_BREAK             =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+POUR_OBJECT            =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+POUR_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+REBAR                  =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+REBAR_ASSEMBLY         =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+REFERENCE_MODEL        =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+REFERENCE_OBJECT       =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+REFERENCE_ASSEMBLY     =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+REVISION               =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+SIMILAR_ASSEMBLY       =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+SIMILAR_CAST_UNIT      =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+SIMILAR_PART           =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+SINGLE_REBAR           =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+SINGLE_STRAND          =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+STRAND                 =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+STUD                   =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+SUMMARY                =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+SURFACE                =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+SURFACING              =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+TASK                   =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+WASHER                 =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+WELD                   =USERDEFINED.[КМ Атрибуты].KM_Weight "Масса листа брутто, кг"
+
+// ---------------------------------------------------------------------------
+// KM_Color - Окрашено
+// ---------------------------------------------------------------------------
+HEADER                 =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+PAGEHEADER             =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+PAGEFOOTER             =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+FOOTER                 =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+ANALYSIS_RIGID_LINK    =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+ANTIMATERIAL           =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+ASSEMBLY               =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+BOLT                   =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+CAST_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+CHAMFER                =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+COMMENT                =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+CONNECTION             =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+DRAWING                =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+HIERARCHIC_CAST_UNIT   =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+HIERARCHIC_OBJECT      =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+HISTORY                =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+HOLE                   =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+LOAD                   =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+LOADGROUP              =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+MESH                   =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+NUT                    =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+PART                   =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+POUR_BREAK             =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+POUR_OBJECT            =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+POUR_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+REBAR                  =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+REBAR_ASSEMBLY         =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+REFERENCE_MODEL        =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+REFERENCE_OBJECT       =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+REFERENCE_ASSEMBLY     =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+REVISION               =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+SIMILAR_ASSEMBLY       =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+SIMILAR_CAST_UNIT      =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+SIMILAR_PART           =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+SINGLE_REBAR           =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+SINGLE_STRAND          =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+STRAND                 =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+STUD                   =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+SUMMARY                =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+SURFACE                =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+SURFACING              =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+TASK                   =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+WASHER                 =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+WELD                   =USERDEFINED.[КМ Атрибуты].KM_Color "Окрашено"
+
+// ---------------------------------------------------------------------------
+// KM_Sun - С воздействием УФ
+// ---------------------------------------------------------------------------
+HEADER                 =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+PAGEHEADER             =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+PAGEFOOTER             =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+FOOTER                 =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+ANALYSIS_RIGID_LINK    =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+ANTIMATERIAL           =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+ASSEMBLY               =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+BOLT                   =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+CAST_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+CHAMFER                =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+COMMENT                =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+CONNECTION             =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+DRAWING                =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+HIERARCHIC_CAST_UNIT   =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+HIERARCHIC_OBJECT      =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+HISTORY                =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+HOLE                   =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+LOAD                   =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+LOADGROUP              =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+MESH                   =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+NUT                    =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+PART                   =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+POUR_BREAK             =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+POUR_OBJECT            =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+POUR_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+REBAR                  =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+REBAR_ASSEMBLY         =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+REFERENCE_MODEL        =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+REFERENCE_OBJECT       =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+REFERENCE_ASSEMBLY     =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+REVISION               =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+SIMILAR_ASSEMBLY       =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+SIMILAR_CAST_UNIT      =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+SIMILAR_PART           =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+SINGLE_REBAR           =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+SINGLE_STRAND          =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+STRAND                 =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+STUD                   =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+SUMMARY                =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+SURFACE                =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+SURFACING              =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+TASK                   =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+WASHER                 =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+WELD                   =USERDEFINED.[КМ Атрибуты].KM_Sun "С воздействием УФ"
+
+// ---------------------------------------------------------------------------
+// KM_Aggr - С воздействием АС
+// ---------------------------------------------------------------------------
+HEADER                 =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+PAGEHEADER             =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+PAGEFOOTER             =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+FOOTER                 =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+ANALYSIS_RIGID_LINK    =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+ANTIMATERIAL           =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+ASSEMBLY               =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+BOLT                   =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+CAST_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+CHAMFER                =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+COMMENT                =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+CONNECTION             =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+DRAWING                =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+HIERARCHIC_CAST_UNIT   =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+HIERARCHIC_OBJECT      =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+HISTORY                =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+HOLE                   =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+LOAD                   =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+LOADGROUP              =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+MESH                   =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+NUT                    =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+PART                   =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+POUR_BREAK             =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+POUR_OBJECT            =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+POUR_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+REBAR                  =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+REBAR_ASSEMBLY         =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+REFERENCE_MODEL        =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+REFERENCE_OBJECT       =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+REFERENCE_ASSEMBLY     =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+REVISION               =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+SIMILAR_ASSEMBLY       =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+SIMILAR_CAST_UNIT      =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+SIMILAR_PART           =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+SINGLE_REBAR           =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+SINGLE_STRAND          =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+STRAND                 =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+STUD                   =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+SUMMARY                =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+SURFACE                =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+SURFACING              =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+TASK                   =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+WASHER                 =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+WELD                   =USERDEFINED.[КМ Атрибуты].KM_Aggr "С воздействием АС"
+
+// ---------------------------------------------------------------------------
+// KM_Area_Color_nS_nA - Площадь окраски без УФ, без АС, мм2
+// ---------------------------------------------------------------------------
+HEADER                 =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+PAGEHEADER             =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+PAGEFOOTER             =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+FOOTER                 =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+ANALYSIS_RIGID_LINK    =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+ANTIMATERIAL           =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+ASSEMBLY               =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+BOLT                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+CAST_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+CHAMFER                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+COMMENT                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+CONNECTION             =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+DRAWING                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+HIERARCHIC_CAST_UNIT   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+HIERARCHIC_OBJECT      =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+HISTORY                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+HOLE                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+LOAD                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+LOADGROUP              =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+MESH                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+NUT                    =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+PART                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+POUR_BREAK             =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+POUR_OBJECT            =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+POUR_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+REBAR                  =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+REBAR_ASSEMBLY         =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+REFERENCE_MODEL        =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+REFERENCE_OBJECT       =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+REFERENCE_ASSEMBLY     =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+REVISION               =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+SIMILAR_ASSEMBLY       =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+SIMILAR_CAST_UNIT      =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+SIMILAR_PART           =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+SINGLE_REBAR           =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+SINGLE_STRAND          =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+STRAND                 =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+STUD                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+SUMMARY                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+SURFACE                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+SURFACING              =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+TASK                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+WASHER                 =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+WELD                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_nA "S окр. без УФ, без АС, мм2"
+
+// ---------------------------------------------------------------------------
+// KM_Area_Color_nS_yA - Площадь окраски без УФ, с АС, мм2
+// ---------------------------------------------------------------------------
+HEADER                 =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+PAGEHEADER             =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+PAGEFOOTER             =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+FOOTER                 =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+ANALYSIS_RIGID_LINK    =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+ANTIMATERIAL           =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+ASSEMBLY               =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+BOLT                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+CAST_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+CHAMFER                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+COMMENT                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+CONNECTION             =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+DRAWING                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+HIERARCHIC_CAST_UNIT   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+HIERARCHIC_OBJECT      =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+HISTORY                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+HOLE                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+LOAD                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+LOADGROUP              =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+MESH                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+NUT                    =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+PART                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+POUR_BREAK             =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+POUR_OBJECT            =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+POUR_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+REBAR                  =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+REBAR_ASSEMBLY         =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+REFERENCE_MODEL        =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+REFERENCE_OBJECT       =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+REFERENCE_ASSEMBLY     =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+REVISION               =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+SIMILAR_ASSEMBLY       =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+SIMILAR_CAST_UNIT      =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+SIMILAR_PART           =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+SINGLE_REBAR           =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+SINGLE_STRAND          =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+STRAND                 =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+STUD                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+SUMMARY                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+SURFACE                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+SURFACING              =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+TASK                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+WASHER                 =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+WELD                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_nS_yA "S окр. без УФ, с АС, мм2"
+
+// ---------------------------------------------------------------------------
+// KM_Area_Color_yS_nA - Площадь окраски с УФ, без АС, мм2
+// ---------------------------------------------------------------------------
+HEADER                 =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+PAGEHEADER             =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+PAGEFOOTER             =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+FOOTER                 =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+ANALYSIS_RIGID_LINK    =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+ANTIMATERIAL           =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+ASSEMBLY               =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+BOLT                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+CAST_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+CHAMFER                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+COMMENT                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+CONNECTION             =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+DRAWING                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+HIERARCHIC_CAST_UNIT   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+HIERARCHIC_OBJECT      =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+HISTORY                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+HOLE                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+LOAD                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+LOADGROUP              =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+MESH                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+NUT                    =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+PART                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+POUR_BREAK             =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+POUR_OBJECT            =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+POUR_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+REBAR                  =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+REBAR_ASSEMBLY         =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+REFERENCE_MODEL        =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+REFERENCE_OBJECT       =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+REFERENCE_ASSEMBLY     =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+REVISION               =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+SIMILAR_ASSEMBLY       =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+SIMILAR_CAST_UNIT      =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+SIMILAR_PART           =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+SINGLE_REBAR           =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+SINGLE_STRAND          =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+STRAND                 =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+STUD                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+SUMMARY                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+SURFACE                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+SURFACING              =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+TASK                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+WASHER                 =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+WELD                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_nA "S окр. с УФ, без АС, мм2"
+
+// ---------------------------------------------------------------------------
+// KM_Area_Color_yS_yA - Площадь окраски с УФ, с АС, мм2
+// ---------------------------------------------------------------------------
+HEADER                 =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+PAGEHEADER             =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+PAGEFOOTER             =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+FOOTER                 =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+ANALYSIS_RIGID_LINK    =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+ANTIMATERIAL           =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+ASSEMBLY               =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+BOLT                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+CAST_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+CHAMFER                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+COMMENT                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+CONNECTION             =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+DRAWING                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+HIERARCHIC_CAST_UNIT   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+HIERARCHIC_OBJECT      =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+HISTORY                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+HOLE                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+LOAD                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+LOADGROUP              =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+MESH                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+NUT                    =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+PART                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+POUR_BREAK             =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+POUR_OBJECT            =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+POUR_UNIT              =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+REBAR                  =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+REBAR_ASSEMBLY         =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+REFERENCE_MODEL        =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+REFERENCE_OBJECT       =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+REFERENCE_ASSEMBLY     =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+REVISION               =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+SIMILAR_ASSEMBLY       =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+SIMILAR_CAST_UNIT      =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+SIMILAR_PART           =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+SINGLE_REBAR           =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+SINGLE_STRAND          =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+STRAND                 =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+STUD                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+SUMMARY                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+SURFACE                =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+SURFACING              =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+TASK                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+WASHER                 =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+WELD                   =USERDEFINED.[КМ Атрибуты].KM_Area_Color_yS_yA "S окр. с УФ, с АС, мм2"
+
+
+[ALL]

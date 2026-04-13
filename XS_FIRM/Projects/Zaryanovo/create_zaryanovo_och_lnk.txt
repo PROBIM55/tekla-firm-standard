@@ -1,0 +1,1 @@
+C:\TeklaStructures\2025.0\bin\TeklaStructures.exe -i C:\Tekla Structures\2025.0\Environments\GOST\env_GOST_environment.ini -i C:\TeklaStructures\2025.0\Environments\GOST\role_Все.ini -m create_zaryanovo_och.cs

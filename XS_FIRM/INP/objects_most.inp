@@ -1,0 +1,73 @@
+
+part(0,"Part")
+{		
+	tab_page("Most")
+	{
+		attribute("MOST_Thick", "Толщина листа", integer, "%d", yes, none, "0.0", "0.0")
+		{		
+			value("",	   						1)
+		}
+		attribute("MOST_Area", "Площадь листа брутто", float, "%d", yes, none, "0.0", "0.0")
+		{		
+			value("",	   						1)
+		}
+		attribute("MOST_Volume", "Объем листа брутто", float, "%d", yes, none, "0.0", "0.0")
+		{		
+			value("",	   						1)
+		}
+		attribute("MOST_Weight", "Масса листа брутто", float, "%d", yes, none, "0.0", "0.0")
+		{		
+			value("",	   						1)
+		}
+	}
+	tab_page("Most", "Мост", 40)
+	modify(1)
+}
+part(0,"Part")
+{
+	tab_page("Most", "Мост", 40)
+	modify(1)
+}
+beam(0,"j_beam")
+{
+tab_page("Most", "Мост", 40)
+modify(1)
+}
+column(0,"j_column")
+{
+tab_page("Most", "Мост", 40)
+modify(1)
+}
+contourplate(0,"j_contour_plate")
+{
+tab_page("Most", "Мост", 40)
+modify(1)
+}
+/***************************************************************************/
+/* Drawing attributes - single part (Чертеж отдельной детали) */
+/***************************************************************************/
+singledrawing(0,"j_Single_part_drawing")
+{
+	tab_page("Most", "Мост", 40)
+	modify(1)
+}
+
+
+/***************************************************************************/
+/* Drawing attributes - assembly (Чертеж сборки) */
+/***************************************************************************/
+assemblydrawing(0,"j_Assembly_drawing")
+{
+	tab_page("Most", "Мост", 40)
+	modify(1)
+}
+
+
+/***************************************************************************/
+/* Drawing attributes - GA (Чертеж общего вида) */
+/***************************************************************************/
+gadrawing(0,"j_GA_drawing")
+{
+	tab_page("Most", "Мост", 40)
+	modify(1)
+}

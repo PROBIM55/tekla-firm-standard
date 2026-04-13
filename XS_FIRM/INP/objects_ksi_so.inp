@@ -1,0 +1,99 @@
+part(0,"Part")
+{
+tab_page("SO tab")
+	{
+		attribute("SO_uniformat", "Uniformat", string,"%s", no, none, "0,0", "0,0")
+		{
+			value("", 0)
+		}
+		attribute("SO_num_constrain", "Номер опоры", string,"%s", no, none, "0,0", "0,0")
+		{
+			value("", 0)
+		}
+		attribute("SO_shlam_layer", "Высота шламового слоя", float,"%d", no, none, "0,0", "0,0")
+		{
+			value("", 0)
+		}
+		attribute("SO_mass_den", "Средняя плотность прорезаемых слоев грунта", float,"%d", no, none, "0,0", "0,0")
+		{
+			value("", 0)
+		}
+		attribute("SO_count_piles", "Кол-во свай на опоре", float,"%d", no, none, "0,0", "0,0")
+		{
+			value("", 0)
+		}
+		attribute("SO_trials_BNS", "Штамповые испытания грунта в основании БНС", float,"%d", no, none, "0,0", "0,0")
+		{
+			value("", 0)
+		}
+		attribute("SO_trials_PET", "Испытания сплошности сваи методом PET", float,"%d", no, none, "0,0", "0,0")
+		{
+			value("", 0)
+		}
+	}
+tab_page("KSI tab")
+	{
+		attribute("KSI_code_class", "КСИ Код класса XNKC0001", string,"%s", no, none, "0,0", "0,0")
+		{
+		value("", 0)
+		}
+		attribute("KSI_name_class", "КСИ Наименование класса XNKC0002", string,"%s", no, none, "0,0", "0,0")
+		{
+		value("", 0)
+		}
+		attribute("KSI_class_build_inf", "КСИ Класс строительной информации XNKC0003", string,"%s", no, none, "0,0", "0,0")
+		{
+		value("", 0)
+		}
+		attribute("KSI_code_type_class", "КСИ Код типа класса XNKT0001", string,"%s", no, none, "0,0", "0,0")
+		{
+		value("", 0)
+		}
+		attribute("KSI_name_type_class", "КСИ Наименование типа класса XNKT0002", string,"%s", no, none, "0,0", "0,0")
+		{
+		value("", 0)
+		}
+		attribute("KSI_code_product", "КСИ Код продукта XNKP0001", string,"%s", no, none, "0,0", "0,0")
+		{
+		value("", 0)
+		}
+		}
+		tab_page("SO tab", "СО", 20)
+		tab_page("KSI tab", "КСИ", 21)
+		modify (1)
+	}
+column(0,"j_column")
+{
+/* the part() section: */
+tab_page("SO tab", "СО", 20)
+tab_page("KSI tab", "КСИ", 21)
+modify (1)
+}
+concrete_column(0,"Concrete column")
+{
+/* the part() section: */
+tab_page("SO tab", "СО", 20)
+tab_page("KSI tab", "КСИ", 21)
+modify (1)
+}
+concrete_spiral_beam(0,"j_concrete_spiral_beam")
+{
+/* the part() section: */
+tab_page("SO tab", "СО", 20)
+tab_page("KSI tab", "КСИ", 21)
+modify (1)
+}
+concrete_beam(0,"Concrete beam")
+{
+/* the part() section: */
+tab_page("SO tab", "СО", 20)
+tab_page("KSI tab", "КСИ", 21)
+modify (1)
+}
+beam(0,"j_beam")
+{
+/* the part() section: */
+tab_page("SO tab", "СО", 20)
+tab_page("KSI tab", "КСИ", 21)
+modify (1)
+}

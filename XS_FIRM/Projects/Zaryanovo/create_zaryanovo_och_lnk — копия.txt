@@ -1,0 +1,1 @@
+C:\TeklaStructures\2025.0\bin\TeklaStructures.exe -m create_zaryanovo_och.cs

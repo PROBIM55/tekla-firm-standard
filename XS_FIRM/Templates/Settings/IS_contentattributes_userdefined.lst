@@ -1,0 +1,509 @@
+// ---------------------------------------------------------------------------------------
+// Template Editor 3.80 (2019) - User defined attributes (=UDA)
+// =====================================================
+// 
+// This file contains attributes which are defined in the 'objects.inp'.
+// 
+// Notes:
+// - Please use the predefined folder 'USERDEFINED' for the each attributes in this file.
+// - Installation of Tekla Structures overwrites always this file.
+//
+// ---------------------------------------------------------------------------------------
+// This file contains the defined attributes and their default values for a value field.
+// 
+// The structure of 'contentattributes_USERDEFINED.lst' is the following. The file is divided
+// into two sections, which are sperated with the line [BINDINGS]. The first section defines
+// all attributes and the default settings for those attributes. The 2nd section assigns
+// the attributes to contenttypes. Attributes are presented to the user in the order they
+// appear in the definition list for contenttypes.
+//
+// A special case of a component type is ALL, which defines that the attributes defined in 
+// the following lines are available to all types of components. Other special types are
+// HEADER, PAGEHEADER, PAGEFOOTER and FOOTER.
+// 
+// You can use a virtual node to group certain attributes under a common subnode. A virtual
+// node is defined inside []. This doesn't affect the name of the actual attribute - text
+// between [] is removed when the attribute name is inserted into a template definition.
+//
+// You can add comment text for the user attributes by defining it between "-characters after
+// the attribute name.
+// 
+// The attribute definition line is divided into nine different columns. The star character
+// '*' means that the default value should be used or that this property doesn't apply to
+// this type of valuefield.
+// 
+// The attribute dividing to the different versions can be done by using extension #1...N
+// in attribute name.
+//
+// The columns are
+// 
+// 1. Attribute name (maximum of 63 characters. Use only letters, numbers, dots and underlines)
+// 2. Data type (FLOAT, CHARACTER, INTEGER)
+// 3. Value field justification (LEFT, CENTER, RIGHT)
+// 4. Is the field cacheable (TRUE or FALSE, TRUE is default)
+// 5. Value field length (characters)
+// 6. The number of decimals (present only if data type is FLOAT, and no precision defined)
+// 7. The unit type
+// 8. The unit
+// 9. The precision
+// 										
+// Name				Datatype	Justify Cacheable	Length	Decimals 	Unit type 	Unit 		Precision
+// XXXX				CHARACTER	RIGHT	TRUE		8		2 			Length		ft-frac		1/8
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// TAB_ISSO
+is_element_constr	CHARACTER	CENTER	TRUE	15
+is_naimen_1			CHARACTER	CENTER	TRUE	15
+is_naimen_2	    	CHARACTER	CENTER	TRUE	15
+is_seria          	CHARACTER	CENTER	TRUE	15
+is_constr		    CHARACTER	CENTER	TRUE	15
+is_massa	        CHARACTER	CENTER	TRUE	15
+is_beton        	CHARACTER	CENTER	TRUE	15
+is_polz_pole	    CHARACTER	CENTER	TRUE	15
+is_gr_object      	CHARACTER	CENTER	TRUE	15
+
+
+
+// end of custom properties
+
+// ------------------------------------------------------------------------------------------------
+// Binding of attributes according to the object types.
+// (available object types for Row component have saved in the contenttypes.lst)
+// ------------------------------------------------------------------------------------------------
+
+// ANALYSIS_RIGID_LINK		=
+// ANTIMATERIAL				=
+// ASSEMBLY					=
+// BOLT						=
+// CAST_UNIT				=
+// CHAMFER					=
+// COMMENT					=
+// CONNECTION				=
+// DRAWING					=
+// HIERARCHIC_CAST_UNIT		=
+// HIERARCHIC_OBJECT		=
+// HISTORY					=
+// HOLE						=
+// LOAD						=
+// LOADGROUP				=
+// MESH						=
+// NUT						=
+// PART						=
+// POUR_BREAK				=
+// POUR_OBJECT				=
+// POUR_UNIT				=
+// REBAR					=
+// REFERENCE_MODEL			=
+// REFERENCE_OBJECT			=
+// REFERENCE_ASSEMBLY		=
+// REVISION					=
+// SIMILAR_ASSEMBLY			=
+// SIMILAR_CAST_UNIT		=
+// SIMILAR_PART				=
+// SINGLE_REBAR				=
+// SINGLE_STRAND			=
+// STRAND					=
+// STUD						=
+// SURFACE					=
+// SURFACING				=
+// TASK						=
+// WASHER					=
+// WELD						=
+
+
+[BINDINGS] // Do NOT remove this line
+
+// ==================================
+//   Construction management
+//   ------------------
+//   tab_page("ИССО")
+// ==================================
+
+HEADER						=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+PAGEHEADER					=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+PAGEFOOTER					=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+FOOTER						=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+ANALYSIS_RIGID_LINK			=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+ANTIMATERIAL				=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+ASSEMBLY					=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+BOLT						=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+CAST_UNIT					=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+CHAMFER						=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+COMMENT						=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+CONNECTION					=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+DRAWING						=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+HIERARCHIC_CAST_UNIT		=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+HIERARCHIC_OBJECT			=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+HISTORY						=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+HOLE						=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+LOAD						=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+LOADGROUP					=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+MESH						=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+NUT							=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+PART						=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+POUR_BREAK					=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+POUR_OBJECT					=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+POUR_UNIT					=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+REBAR						=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+REFERENCE_MODEL				=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+REFERENCE_OBJECT			=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+REFERENCE_ASSEMBLY			=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+REVISION					=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+SIMILAR_ASSEMBLY			=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+SIMILAR_CAST_UNIT			=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+SIMILAR_PART				=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+SINGLE_REBAR				=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+SINGLE_STRAND				=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+STRAND						=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+STUD						=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+SURFACE						=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+SURFACING					=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+TASK						=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+WASHER						=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+WELD						=USERDEFINED.[ИССО].is_element_constr "Элемент конструкции/Вид работ"
+
+HEADER						=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+PAGEHEADER					=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+PAGEFOOTER					=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+FOOTER						=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+ANALYSIS_RIGID_LINK			=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+ANTIMATERIAL				=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+ASSEMBLY					=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+BOLT						=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+CAST_UNIT					=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+CHAMFER						=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+COMMENT						=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+CONNECTION					=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+DRAWING						=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+HIERARCHIC_CAST_UNIT		=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+HIERARCHIC_OBJECT			=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+HISTORY						=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+HOLE						=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+LOAD						=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+LOADGROUP					=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+MESH						=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+NUT							=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+PART						=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+POUR_BREAK					=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+POUR_OBJECT					=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+POUR_UNIT					=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+REBAR						=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+REFERENCE_MODEL				=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+REFERENCE_OBJECT			=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+REFERENCE_ASSEMBLY			=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+REVISION					=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+SIMILAR_ASSEMBLY			=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+SIMILAR_CAST_UNIT			=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+SIMILAR_PART				=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+SINGLE_REBAR				=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+SINGLE_STRAND				=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+STRAND						=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+STUD						=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+SURFACE						=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+SURFACING					=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+TASK						=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+WASHER						=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+WELD						=USERDEFINED.[ИССО].is_naimen_1 "Наименование элементов/работы 1"
+
+HEADER						=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+PAGEHEADER					=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+PAGEFOOTER					=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+FOOTER						=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+ANALYSIS_RIGID_LINK			=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+ANTIMATERIAL				=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+ASSEMBLY					=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+BOLT						=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+CAST_UNIT					=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+CHAMFER						=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+COMMENT						=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+CONNECTION					=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+DRAWING						=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+HIERARCHIC_CAST_UNIT		=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+HIERARCHIC_OBJECT			=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+HISTORY						=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+HOLE						=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+LOAD						=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+LOADGROUP					=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+MESH						=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+NUT							=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+PART						=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+POUR_BREAK					=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+POUR_OBJECT					=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+POUR_UNIT					=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+REBAR						=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+REFERENCE_MODEL				=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+REFERENCE_OBJECT			=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+REFERENCE_ASSEMBLY			=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+REVISION					=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+SIMILAR_ASSEMBLY			=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+SIMILAR_CAST_UNIT			=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+SIMILAR_PART				=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+SINGLE_REBAR				=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+SINGLE_STRAND				=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+STRAND						=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+STUD						=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+SURFACE						=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+SURFACING					=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+TASK						=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+WASHER						=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+WELD						=USERDEFINED.[ИССО].is_naimen_2 "Наименование элементов/работы 2"
+
+HEADER						=USERDEFINED.[ИССО].is_seria "Серия"
+PAGEHEADER					=USERDEFINED.[ИССО].is_seria "Серия"
+PAGEFOOTER					=USERDEFINED.[ИССО].is_seria "Серия"
+FOOTER						=USERDEFINED.[ИССО].is_seria "Серия"
+ANALYSIS_RIGID_LINK			=USERDEFINED.[ИССО].is_seria "Серия"
+ANTIMATERIAL				=USERDEFINED.[ИССО].is_seria "Серия"
+ASSEMBLY					=USERDEFINED.[ИССО].is_seria "Серия"
+BOLT						=USERDEFINED.[ИССО].is_seria "Серия"
+CAST_UNIT					=USERDEFINED.[ИССО].is_seria "Серия"
+CHAMFER						=USERDEFINED.[ИССО].is_seria "Серия"
+COMMENT						=USERDEFINED.[ИССО].is_seria "Серия"
+CONNECTION					=USERDEFINED.[ИССО].is_seria "Серия"
+DRAWING						=USERDEFINED.[ИССО].is_seria "Серия"
+HIERARCHIC_CAST_UNIT		=USERDEFINED.[ИССО].is_seria "Серия"
+HIERARCHIC_OBJECT			=USERDEFINED.[ИССО].is_seria "Серия"
+HISTORY						=USERDEFINED.[ИССО].is_seria "Серия"
+HOLE						=USERDEFINED.[ИССО].is_seria "Серия"
+LOAD						=USERDEFINED.[ИССО].is_seria "Серия"
+LOADGROUP					=USERDEFINED.[ИССО].is_seria "Серия"
+MESH						=USERDEFINED.[ИССО].is_seria "Серия"
+NUT							=USERDEFINED.[ИССО].is_seria "Серия"
+PART						=USERDEFINED.[ИССО].is_seria "Серия"
+POUR_BREAK					=USERDEFINED.[ИССО].is_seria "Серия"
+POUR_OBJECT					=USERDEFINED.[ИССО].is_seria "Серия"
+POUR_UNIT					=USERDEFINED.[ИССО].is_seria "Серия"
+REBAR						=USERDEFINED.[ИССО].is_seria "Серия"
+REFERENCE_MODEL				=USERDEFINED.[ИССО].is_seria "Серия"
+REFERENCE_OBJECT			=USERDEFINED.[ИССО].is_seria "Серия"
+REFERENCE_ASSEMBLY			=USERDEFINED.[ИССО].is_seria "Серия"
+REVISION					=USERDEFINED.[ИССО].is_seria "Серия"
+SIMILAR_ASSEMBLY			=USERDEFINED.[ИССО].is_seria "Серия"
+SIMILAR_CAST_UNIT			=USERDEFINED.[ИССО].is_seria "Серия"
+SIMILAR_PART				=USERDEFINED.[ИССО].is_seria "Серия"
+SINGLE_REBAR				=USERDEFINED.[ИССО].is_seria "Серия"
+SINGLE_STRAND				=USERDEFINED.[ИССО].is_seria "Серия"
+STRAND						=USERDEFINED.[ИССО].is_seria "Серия"
+STUD						=USERDEFINED.[ИССО].is_seria "Серия"
+SURFACE						=USERDEFINED.[ИССО].is_seria "Серия"
+SURFACING					=USERDEFINED.[ИССО].is_seria "Серия"
+TASK						=USERDEFINED.[ИССО].is_seria "Серия"
+WASHER						=USERDEFINED.[ИССО].is_seria "Серия"
+WELD						=USERDEFINED.[ИССО].is_seria "Серия"
+
+HEADER						=USERDEFINED.[ИССО].is_constr "Конструкция"
+PAGEHEADER					=USERDEFINED.[ИССО].is_constr "Конструкция"
+PAGEFOOTER					=USERDEFINED.[ИССО].is_constr "Конструкция"
+FOOTER						=USERDEFINED.[ИССО].is_constr "Конструкция"
+ANALYSIS_RIGID_LINK			=USERDEFINED.[ИССО].is_constr "Конструкция"
+ANTIMATERIAL				=USERDEFINED.[ИССО].is_constr "Конструкция"
+ASSEMBLY					=USERDEFINED.[ИССО].is_constr "Конструкция"
+BOLT						=USERDEFINED.[ИССО].is_constr "Конструкция"
+CAST_UNIT					=USERDEFINED.[ИССО].is_constr "Конструкция"
+CHAMFER						=USERDEFINED.[ИССО].is_constr "Конструкция"
+COMMENT						=USERDEFINED.[ИССО].is_constr "Конструкция"
+CONNECTION					=USERDEFINED.[ИССО].is_constr "Конструкция"
+DRAWING						=USERDEFINED.[ИССО].is_constr "Конструкция"
+HIERARCHIC_CAST_UNIT		=USERDEFINED.[ИССО].is_constr "Конструкция"
+HIERARCHIC_OBJECT			=USERDEFINED.[ИССО].is_constr "Конструкция"
+HISTORY						=USERDEFINED.[ИССО].is_constr "Конструкция"
+HOLE						=USERDEFINED.[ИССО].is_constr "Конструкция"
+LOAD						=USERDEFINED.[ИССО].is_constr "Конструкция"
+LOADGROUP					=USERDEFINED.[ИССО].is_constr "Конструкция"
+MESH						=USERDEFINED.[ИССО].is_constr "Конструкция"
+NUT							=USERDEFINED.[ИССО].is_constr "Конструкция"
+PART						=USERDEFINED.[ИССО].is_constr "Конструкция"
+POUR_BREAK					=USERDEFINED.[ИССО].is_constr "Конструкция"
+POUR_OBJECT					=USERDEFINED.[ИССО].is_constr "Конструкция"
+POUR_UNIT					=USERDEFINED.[ИССО].is_constr "Конструкция"
+REBAR						=USERDEFINED.[ИССО].is_constr "Конструкция"
+REFERENCE_MODEL				=USERDEFINED.[ИССО].is_constr "Конструкция"
+REFERENCE_OBJECT			=USERDEFINED.[ИССО].is_constr "Конструкция"
+REFERENCE_ASSEMBLY			=USERDEFINED.[ИССО].is_constr "Конструкция"
+REVISION					=USERDEFINED.[ИССО].is_constr "Конструкция"
+SIMILAR_ASSEMBLY			=USERDEFINED.[ИССО].is_constr "Конструкция"
+SIMILAR_CAST_UNIT			=USERDEFINED.[ИССО].is_constr "Конструкция"
+SIMILAR_PART				=USERDEFINED.[ИССО].is_constr "Конструкция"
+SINGLE_REBAR				=USERDEFINED.[ИССО].is_constr "Конструкция"
+SINGLE_STRAND				=USERDEFINED.[ИССО].is_constr "Конструкция"
+STRAND						=USERDEFINED.[ИССО].is_constr "Конструкция"
+STUD						=USERDEFINED.[ИССО].is_constr "Конструкция"
+SURFACE						=USERDEFINED.[ИССО].is_constr "Конструкция"
+SURFACING					=USERDEFINED.[ИССО].is_constr "Конструкция"
+TASK						=USERDEFINED.[ИССО].is_constr "Конструкция"
+WASHER						=USERDEFINED.[ИССО].is_constr "Конструкция"
+WELD						=USERDEFINED.[ИССО].is_constr "Конструкция"
+
+HEADER						=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+PAGEHEADER					=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+PAGEFOOTER					=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+FOOTER						=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+ANALYSIS_RIGID_LINK			=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+ANTIMATERIAL				=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+ASSEMBLY					=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+BOLT						=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+CAST_UNIT					=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+CHAMFER						=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+COMMENT						=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+CONNECTION					=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+DRAWING						=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+HIERARCHIC_CAST_UNIT		=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+HIERARCHIC_OBJECT			=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+HISTORY						=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+HOLE						=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+LOAD						=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+LOADGROUP					=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+MESH						=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+NUT							=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+PART						=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+POUR_BREAK					=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+POUR_OBJECT					=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+POUR_UNIT					=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+REBAR						=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+REFERENCE_MODEL				=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+REFERENCE_OBJECT			=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+REFERENCE_ASSEMBLY			=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+REVISION					=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+SIMILAR_ASSEMBLY			=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+SIMILAR_CAST_UNIT			=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+SIMILAR_PART				=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+SINGLE_REBAR				=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+SINGLE_STRAND				=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+STRAND						=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+STUD						=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+SURFACE						=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+SURFACING					=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+TASK						=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+WASHER						=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+WELD						=USERDEFINED.[ИССО].is_massa "Инвентарная масса"
+
+HEADER						=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+PAGEHEADER					=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+PAGEFOOTER					=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+FOOTER						=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+ANALYSIS_RIGID_LINK			=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+ANTIMATERIAL				=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+ASSEMBLY					=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+BOLT						=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+CAST_UNIT					=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+CHAMFER						=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+COMMENT						=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+CONNECTION					=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+DRAWING						=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+HIERARCHIC_CAST_UNIT		=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+HIERARCHIC_OBJECT			=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+HISTORY						=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+HOLE						=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+LOAD						=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+LOADGROUP					=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+MESH						=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+NUT							=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+PART						=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+POUR_BREAK					=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+POUR_OBJECT					=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+POUR_UNIT					=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+REBAR						=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+REFERENCE_MODEL				=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+REFERENCE_OBJECT			=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+REFERENCE_ASSEMBLY			=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+REVISION					=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+SIMILAR_ASSEMBLY			=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+SIMILAR_CAST_UNIT			=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+SIMILAR_PART				=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+SINGLE_REBAR				=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+SINGLE_STRAND				=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+STRAND						=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+STUD						=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+SURFACE						=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+SURFACING					=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+TASK						=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+WASHER						=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+WELD						=USERDEFINED.[ИССО].is_beton "Инвентарный объем бетона, м^3"
+
+HEADER						=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+PAGEHEADER					=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+PAGEFOOTER					=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+FOOTER						=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+ANALYSIS_RIGID_LINK			=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+ANTIMATERIAL				=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+ASSEMBLY					=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+BOLT						=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+CAST_UNIT					=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+CHAMFER						=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+COMMENT						=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+CONNECTION					=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+DRAWING						=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+HIERARCHIC_CAST_UNIT		=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+HIERARCHIC_OBJECT			=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+HISTORY						=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+HOLE						=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+LOAD						=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+LOADGROUP					=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+MESH						=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+NUT							=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+PART						=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+POUR_BREAK					=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+POUR_OBJECT					=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+POUR_UNIT					=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+REBAR						=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+REFERENCE_MODEL				=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+REFERENCE_OBJECT			=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+REFERENCE_ASSEMBLY			=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+REVISION					=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+SIMILAR_ASSEMBLY			=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+SIMILAR_CAST_UNIT			=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+SIMILAR_PART				=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+SINGLE_REBAR				=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+SINGLE_STRAND				=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+STRAND						=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+STUD						=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+SURFACE						=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+SURFACING					=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+TASK						=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+WASHER						=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+WELD						=USERDEFINED.[ИССО].is_polz_pole "Пользовательское поле"
+
+HEADER						=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+PAGEHEADER					=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+PAGEFOOTER					=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+FOOTER						=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+ANALYSIS_RIGID_LINK			=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+ANTIMATERIAL				=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+ASSEMBLY					=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+BOLT						=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+CAST_UNIT					=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+CHAMFER						=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+COMMENT						=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+CONNECTION					=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+DRAWING						=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+HIERARCHIC_CAST_UNIT		=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+HIERARCHIC_OBJECT			=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+HISTORY						=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+HOLE						=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+LOAD						=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+LOADGROUP					=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+MESH						=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+NUT							=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+PART						=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+POUR_BREAK					=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+POUR_OBJECT					=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+POUR_UNIT					=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+REBAR						=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+REFERENCE_MODEL				=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+REFERENCE_OBJECT			=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+REFERENCE_ASSEMBLY			=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+REVISION					=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+SIMILAR_ASSEMBLY			=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+SIMILAR_CAST_UNIT			=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+SIMILAR_PART				=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+SINGLE_REBAR				=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+SINGLE_STRAND				=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+STRAND						=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+STUD						=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+SURFACE						=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+SURFACING					=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+TASK						=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+WASHER						=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+WELD						=USERDEFINED.[ИССО].is_gr_object "Группа объектов"
+
+[ALL]
